@@ -1,0 +1,9 @@
+The scripts are all basic.
+
+All it need to understand is a basic knowledge of gdscript.
+
+The user defined functions are all from a basic logic of what
+the function need to do.
+
+
+

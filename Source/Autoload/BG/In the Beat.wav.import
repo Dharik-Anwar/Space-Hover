@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/In the Beat.wav-63a0be1b46e0a475bc738b9cab7aac2a.sample"
+
+[deps]
+
+source_file="res://Source/Autoload/BG/In the Beat.wav"
+dest_files=[ "res://.import/In the Beat.wav-63a0be1b46e0a475bc738b9cab7aac2a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

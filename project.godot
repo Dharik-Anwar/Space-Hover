@@ -1,0 +1,145 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "EndMenu",
+"language": "GDScript",
+"path": "res://Source/UI/Menu/End menu.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Source/Character/Enemy/Enemy.gd"
+}, {
+"base": "Enemy",
+"class": "EnemyShip",
+"language": "GDScript",
+"path": "res://Source/Character/Enemy/EnemyShip.gd"
+}, {
+"base": "RayCast2D",
+"class": "Laser",
+"language": "GDScript",
+"path": "res://Source/Character/Laser/Laser.gd"
+}, {
+"base": "Node",
+"class": "Main",
+"language": "GDScript",
+"path": "res://Source/World/Main.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Source/Character/Player/Player.gd"
+}, {
+"base": "Player",
+"class": "PlayerShip",
+"language": "GDScript",
+"path": "res://Source/Character/Player/PlayerShip.gd"
+}, {
+"base": "Node",
+"class": "Player_Data",
+"language": "GDScript",
+"path": "res://Source/Autoload/PlayerData.gd"
+}, {
+"base": "Button",
+"class": "QuitButton",
+"language": "GDScript",
+"path": "res://Source/UI/Buttons/QuitButton.gd"
+}, {
+"base": "Button",
+"class": "SceneChangeButton",
+"language": "GDScript",
+"path": "res://Source/UI/Buttons/SceneChangeButton.gd"
+}, {
+"base": "Control",
+"class": "UserInterface",
+"language": "GDScript",
+"path": "res://Source/UI/Menu/User Interface.gd"
+} ]
+_global_script_class_icons={
+"EndMenu": "",
+"Enemy": "",
+"EnemyShip": "",
+"Laser": "",
+"Main": "",
+"Player": "",
+"PlayerShip": "",
+"Player_Data": "",
+"QuitButton": "",
+"SceneChangeButton": "",
+"UserInterface": ""
+}
+
+[application]
+
+config/name="Space Hover"
+run/main_scene="res://Source/UI/Menu/Main menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+PlayerData="*res://Source/Autoload/PlayerData.gd"
+BgAudio="*res://Source/Autoload/BG/BGAudio.tscn"
+
+[display]
+
+window/size/width=1366
+window/size/height=768
+window/size/fullscreen=true
+window/size/always_on_top=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+Space={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Ctrl={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777238,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Move_forward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Rotate_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Rotate_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Pause={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="World"
+2d_physics/layer_3="Enemy"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

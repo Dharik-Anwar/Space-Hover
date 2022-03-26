@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Weapons_Beam_Loop.wav-b7af188ff25c1e0c5a5978ba14aeaa09.sample"
+
+[deps]
+
+source_file="res://Source/Character/Laser/Weapons_Beam_Loop.wav"
+dest_files=[ "res://.import/Weapons_Beam_Loop.wav-b7af188ff25c1e0c5a5978ba14aeaa09.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
